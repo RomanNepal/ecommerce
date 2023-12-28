@@ -153,7 +153,7 @@ export default function CategoriesPage() {
           </button>
           {properties.length > 0 &&
             properties.map((property, index) => (
-              <div className="flex gap-1">
+              <div className="flex gap-1" key={property}>
                 <input
                   type="text"
                   placeholder="property name(eg.: Color)"
