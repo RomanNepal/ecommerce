@@ -153,7 +153,7 @@ export default function CategoriesPage() {
           </button>
           {properties.length > 0 &&
             properties.map((property, index) => (
-              <div className="flex gap-1" key={property}>
+              <div key={index} className="flex gap-1">
                 <input
                   type="text"
                   placeholder="property name(eg.: Color)"
@@ -209,8 +209,8 @@ export default function CategoriesPage() {
           </thead>
           <tbody>
             {categories.length > 0 &&
-              categories.map((category) => (
-                <tr key={category}>
+              categories.map((category, ind) => (
+                <tr key={ind}>
                   <td>{category.name}</td>
                   <td>{category?.parent?.name}</td>
                   <td>
